@@ -5,6 +5,9 @@ import TabButton from "./components/TabButton.jsx";
 
 
 function App() {
+  function handleSelect(selectedButton) {
+    console.log(selectedButton);}
+
   return (
     <div>
       <Header />
@@ -31,11 +34,12 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-    <TabButton>Component</TabButton>
-    <TabButton>JXS</TabButton>
-    <TabButton>Props</TabButton>
-    <TabButton>State</TabButton>
+    <TabButton onSelect={() =>handleSelect ('components')}>Component</TabButton>
+    <TabButton onSelect={() =>handleSelect ('jsx')}>JXS</TabButton>
+    <TabButton onSelect={() =>handleSelect ('props')}>Props</TabButton>
+    <TabButton onSelect={() =>handleSelect ('state')}>State</TabButton>
           </menu>
+          Dynamin contetnt goes here
         </section>
       </main>
     </div>
